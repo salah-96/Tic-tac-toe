@@ -111,7 +111,7 @@ jobs:
             type=sha,format=long
             type=ref,event=branch
             latest
-          normaliize: true
+          normalize: true
       
       - name: Build Docker image
         uses: docker/build-push-action@v5
