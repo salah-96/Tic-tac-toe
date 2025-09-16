@@ -80,3 +80,29 @@ View logs:
 ```bash
 kubectl logs -l app=tic-tac-toe
 ```
+
+
+## Cleanup
+
+To remove all Kubernetes resources created for this project:
+
+```bash
+kubectl delete -f kubernetes/deployment.yaml
+kubectl delete -f kubernetes/service.yaml
+kubectl delete -f kubernetes/ingress.yaml
+```
+
+
+Or everything created in Kubernetes for this project:
+
+```bash
+kubectl delete all --all
+```
+
+This deletes all deployments, pods, services, and replica sets in the current namespace (default if not specified).
+
+If you also want to remove the registry secret:
+
+```bash
+kubectl delete secret github-container-registry
+```
